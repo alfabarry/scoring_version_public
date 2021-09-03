@@ -13,8 +13,11 @@ side_part = st.container()
 mean_part = st.container()
 graphe_part = st.container()
 
+titre =""" <div style="background-color: tomato; padding=20px; text-align:center">
+<h1> Définir la chance qu'un emprunt soit remboursé </h1> </div> <br/><br/>
+"""
 with hearder_part:
-    st.title("Définir la chance qu'un emprunt soit remboursé")
+    st.markdown(titre, unsafe_allow_html=True)
 
     ident = st.number_input("Saisir l'identifiant du client", min_value=000000)
 
@@ -219,3 +222,5 @@ with graphe_part:
         st.markdown("## Répartition des mauvais emprunteurs par niveau d'éducation")
         st.bar_chart(data1["NAME_EDUCATION_TYPE"].value_counts())
 
+if __name__ == __main__ :
+    main()
