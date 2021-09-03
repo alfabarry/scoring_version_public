@@ -221,6 +221,3 @@ with graphe_part:
 
         st.markdown("## Répartition des mauvais emprunteurs par niveau d'éducation")
         st.bar_chart(data1["NAME_EDUCATION_TYPE"].value_counts())
-
-if __name__ == "__main__" :
-    main()
