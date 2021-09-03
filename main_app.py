@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.metrics import roc_curve, auc
+
 
 
 
@@ -28,7 +28,7 @@ with hearder_part:
 
 @st.cache
 def data_imp():
-    data= pd.read_csv("E:/formation_data_science/projet7/data/application_train.csv", index_col="SK_ID_CURR")
+    data= pd.read_csv("application_train.csv", index_col="SK_ID_CURR")
     return data
 
 data = data_imp()
@@ -41,12 +41,12 @@ dstat = data[["AMT_INCOME_TOTAL", "AMT_CREDIT", "DAYS_BIRTH", "AMT_ANNUITY", "TA
 
 @st.cache
 def data_proba():
-    table_proba = pd.read_csv("E:/formation_data_science/projet7/table_proba.csv", index_col="SK_ID_CURR")
+    table_proba = pd.read_csv("table_proba.csv", index_col="SK_ID_CURR")
     return table_proba
 
 @st.cache
 def dtest ():
-    data_test = pd.read_csv("E:/formation_data_science/projet7/data_test.csv", index_col="SK_ID_CURR")
+    data_test = pd.read_csv("data_test.csv", index_col="SK_ID_CURR")
     return data_test
 
 
