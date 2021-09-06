@@ -33,11 +33,9 @@ def data_imp():
 
 data = data_imp()
 
-#@st.cache
-#def data_stat(data):
 dstat = data[["AMT_INCOME_TOTAL", "AMT_CREDIT", "DAYS_BIRTH", "AMT_ANNUITY", "TARGET", "CODE_GENDER", "NAME_FAMILY_STATUS", "ORGANIZATION_TYPE", "NAME_INCOME_TYPE",
              "NAME_EDUCATION_TYPE"]]
- #   return data
+
 
 @st.cache
 def data_proba():
@@ -76,7 +74,7 @@ with proba_part:
 
            # Charger le modèle
 
-            p7_pipeline_modele_scoring = joblib.load("E:/formation_data_science/projet7/p7_pipeline_implementez_modele_scoring.sav")
+            p7_pipeline_modele_scoring = joblib.load("p7_pipeline_implementez_modele_scoring.sav")
 
             # definir instance
             instance_to_predict = data_test.loc[[ident]]
